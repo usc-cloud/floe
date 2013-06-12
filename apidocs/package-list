@@ -1,0 +1,12 @@
+edu.usc.pgroup.goffish.gofs
+edu.usc.pgroup.goffish.gofs.graph
+edu.usc.pgroup.goffish.gofs.graph.algorithms
+edu.usc.pgroup.goffish.gofs.namenode
+edu.usc.pgroup.goffish.gofs.namenode.resources
+edu.usc.pgroup.goffish.gofs.partition
+edu.usc.pgroup.goffish.gofs.partition.gml
+edu.usc.pgroup.goffish.gofs.slice
+edu.usc.pgroup.goffish.gofs.subgraph
+edu.usc.pgroup.goffish.gofs.util
+edu.usc.pgroup.goffish.gofs.utilities
+edu.usc.pgroup.goffish.gofs.utilities.partitioning
