@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~  Licensed to the Apache Software Foundation (ASF) under one
+  ~  or more contributor license agreements.  See the NOTICE file
+  ~  distributed with this work for additional information
+  ~  regarding copyright ownership.  The ASF licenses this file
+  ~  to you under the Apache License, Version 2.0 (the
+  ~  "License"); you may not use this file except in compliance
+  ~  with the License.  You may obtain a copy of the License at
+  ~ 
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing,
+  ~  software distributed under the License is distributed on an
+  ~   * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~  KIND, either express or implied.  See the License for the
+  ~  specific language governing permissions and limitations
+  ~  under the License.
+  -->
+
+<project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+
+    <groupId>edu.usc.pgroup</groupId>
+    <artifactId>floe</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>Floe-SNAPSHOT</name>
+    <description>Flow</description>
+
+    <packaging>pom</packaging>
+    <url>http://www.usc.edu/</url>
+
+
+    <inceptionYear>2011</inceptionYear>
+
+    <organization>
+        <name>University of Southern California</name>
+        <url>http://www.usc.edu/</url>
+    </organization>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <attach>true</attach>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <activation>
+                <property>
+                    <name>release</name>
+                </property>
+            </activation>
+        </profile>       
+    </profiles>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>edu.usc.pgroup.floe</groupId>
+                <artifactId>floe-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>edu.usc.pgroup.floe</groupId>
+                <artifactId>floe-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.soyatec</groupId>
+                <artifactId>windowsazure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    
+    <repositories>
+        <repository>
+            <id>wso2-m2</id>
+            <name>WSO2 Maven 2 Repository</name>
+            <url>http://dist.wso2.org/maven2/</url>
+            <releases>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>thirdparty-releases</id>
+            <name>JBoss Thirdparty Releases</name>
+            <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/</url>
+        </repository>
+        <repository>
+            <id>wso2-m2-snapshots</id>
+            <name>WSO2 Maven 2 SNAPSHOTS Repository</name>
+            <url>http://dist.wso2.org/snapshots/maven2/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>interval:10080</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>snmp4j-repo</id>
+            <name>SNMP4J Repository</name>
+            <url>https://server.oosnmp.net/dist/release/</url>
+            <releases>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>jahia</id>
+            <url>http://maven.jahia.org/maven2</url>
+        </repository>
+        <repository>
+            <id>wso2-nexus</id>
+            <name>WSO2 internal Repository</name>
+            <url>http://lutinbuilder.labs.libre-entreprise.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>wso2-maven2-repository-1</id>
+            <url>http://dist.wso2.org/maven2</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>wso2-maven2-repository-2</id>
+            <url>http://dist.wso2.org/snapshots/maven2</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>repository.dev.java.net-maven2</id>
+            <name>Java.net Repository for Maven</name>
+            <url>http://download.java.net/maven/2/</url>
+            <layout>default</layout>
+        </pluginRepository>
+    </pluginRepositories>
+    <modules>
+        <module>modules/floe-core</module>
+        <module>modules/floe-api</module>
+        <module>modules/azure-plugin</module>
+        <module>modules/distribution/manager</module>
+        <module>modules/distribution/coordinator</module>
+        <module>modules/distribution/container</module>
+    </modules>
+
+    <properties>
+        <!-- Sets the source encoding to UTF-8 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Maven Tools -->
+        <maven.version>2.0.7</maven.version>
+        <maven.artifact.version>2.0.8</maven.artifact.version>
+        <maven.archiver.version>2.2</maven.archiver.version>
+        <plexus.utils.version>1.5.4</plexus.utils.version>
+    </properties>
+
+    <developers>
+        <!-- If you are a committer and your name is not listed here, please include/edit -->
+        <developer>
+            <name>Alok Kumbhare</name>
+            <id>Alok</id>
+            <email>kumbhare@usc.edu</email>
+            <organization>USC</organization>
+        </developer>
+	    <developer>
+            <name>Charith Wickramaarachchi</name>
+            <id>charith</id>
+            <email>cwickram@usc.edu</email>
+            <organization>USC</organization>
+	        <url>http://charith.wickramarachchi.org/</url>
+        </developer>
+    </developers>
+
+</project>
