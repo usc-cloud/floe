@@ -1,0 +1,22 @@
+<Document>
+	<Entity class="http://dbpedia.org/ontology/Campus" relationship="" key="CampusCode" status="Query">
+		<Property mapping="CampusCode" name="http://dbpedia.org/ontology/hasCampusCode"/>
+		<Entity class="http://dbpedia.org/ontology/Building" relationship="" key="BuildingCode" status="Query">
+        	<Property mapping="BuildingCode" name="http://dbpedia.org/ontology/hasBuildingCode"/>        	
+        	<Entity class="http://dbpedia.org/ontology/Floor" relationship="http://dbpedia.org/ontology/hasFloor" key="Floor" status="Query">
+	            <Property mapping="Floor" name="http://dbpedia.org/ontology/floorNo"/>
+	            <Entity class="http://dbpedia.org/ontology/Room" relationship="http://dbpedia.org/ontology/hasRoom" key="Room" status="Insert">
+	            	<Property mapping="RoomNo" name="http://dbpedia.org/ontology/hasroomNo"/>
+	            	<Property mapping="Dept" name="http://dbpedia.org/ontology/hasDept"/>
+	            	<Property mapping="Sac" name="http://dbpedia.org/ontology/hasSAC"/>
+	            	<Property mapping="Title" name="http://dbpedia.org/ontology/hasTitle"/>
+	            	<Property mapping="Net" name="http://dbpedia.org/ontology/hasRoomNetArea"/>
+	            	<Property mapping="Percent" name="http://dbpedia.org/ontology/hasPercentOccupied"/>	            	
+        		</Entity>
+        	</Entity>				    
+		</Entity>
+   	</Entity>
+</Document>
+
+
+

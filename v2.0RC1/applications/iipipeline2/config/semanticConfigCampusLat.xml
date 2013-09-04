@@ -1,0 +1,11 @@
+<Document>
+	<Entity class="http://dbpedia.org/ontology/Campus" relationship="" key="CampusCode" status="Query">
+		<Property mapping="CampusCode" name="http://dbpedia.org/ontology/hasCampusCode"/>		                        	
+        	<Entity class="http://purl.org/ifgi/gml/0.1/GeometryProperty" relationship="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasLocation" key="" status="Insert">
+	            <Property mapping="Latitude" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasLatitude"/>
+	            <Property mapping="Longitude" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasLongitude"/>
+        	</Entity>				    		
+   	</Entity>
+</Document>
+
+

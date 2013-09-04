@@ -1,0 +1,14 @@
+<xml>
+	<Entity>	
+		<HeaderName>campus</HeaderName>
+		<Transformation>CampusCode</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>latitude</HeaderName>
+		<Transformation>Latitude</Transformation>					
+	</Entity>
+	<Entity>
+		<HeaderName>longitude</HeaderName>
+		<Transformation>Longitude</Transformation>		
+	</Entity>
+</xml>

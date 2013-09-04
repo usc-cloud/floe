@@ -1,0 +1,19 @@
+<Document>
+	<Entity class="http://dbpedia.org/ontology/Campus" relationship="" key="CampusCode" status="Query">
+		<Property mapping="CampusCode" name="http://dbpedia.org/ontology/hasCampusCode"/>
+		<Entity class="http://dbpedia.org/ontology/Building" relationship="" key="BuildingCode" status="Insert">
+        	<Property mapping="BuildingNum" name="http://dbpedia.org/ontology/hasBuildingNo"/>
+        	<Property mapping="BuildingCode" name="http://dbpedia.org/ontology/hasBuildingCode"/>
+        	<Property mapping="BuildingName" name="http://dbpedia.org/ontology/hasBuildingName"/>
+        	<Property mapping="BuildingAddress" name="http://dbpedia.org/ontology/address"/>
+        	<Property mapping="BuildingFloors" name="http://dbpedia.org/ontology/elevation"/>
+        	<Property mapping="YearBuilt" name="http://dbpedia.org/ontology/buildingstartdate"/>
+        	<Property mapping="GrossArea" name="http://dbpedia.org/ontology/floorArea"/>
+        	<Entity class="http://dbpedia.org/ontology/Architect" relationship="http://dbpedia.org/ontology/architect" key="Architect" status="Insert">
+	            <Property mapping="Architect" name="http://dbpedia.org/ontology/birthname"/>
+        	</Entity>				    
+		</Entity>
+   	</Entity>	
+</Document>
+
+

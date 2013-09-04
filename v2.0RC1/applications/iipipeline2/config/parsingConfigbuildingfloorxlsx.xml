@@ -1,0 +1,14 @@
+<xml>
+	<Entity>	
+		<HeaderName>campus</HeaderName>
+		<Transformation>CampusCode</Transformation>
+	</Entity>	
+	<Entity>
+		<HeaderName>code</HeaderName>
+		<Transformation>BuildingCode</Transformation>
+	</Entity>	
+	<Entity>
+		<HeaderName>floor</HeaderName>
+		<Transformation>FloorNo</Transformation>		
+	</Entity>
+</xml>

@@ -1,0 +1,13 @@
+<Document>
+	<Entity class="http://dbpedia.org/ontology/Campus" relationship="" key="CampusCode" status="Query">
+		<Property mapping="CampusCode" name="http://dbpedia.org/ontology/hasCampusCode"/>
+		<Entity class="http://dbpedia.org/ontology/Building" relationship="" key="BuildingCode" status="Query">
+        	<Property mapping="BuildingCode" name="http://dbpedia.org/ontology/hasBuildingCode"/>        	
+        	<Entity class="http://dbpedia.org/ontology/Floor" relationship="http://dbpedia.org/ontology/hasFloor" key="FloorNo" status="Insert">
+	            <Property mapping="FloorNo" name="http://dbpedia.org/ontology/floorNo"/>
+        	</Entity>				    
+		</Entity>
+   	</Entity>
+</Document>
+
+

@@ -1,0 +1,10 @@
+<Document>
+	<Entity class="http://dbpedia.org/ontology/Campus" relationship="" key="CampusCode" status="Query">
+		<Property mapping="CampusCode" name="http://dbpedia.org/ontology/hasCampusCode"/>
+		<Entity class="http://www.w3.org/2002/12/cal/icaltzd#Vevent" relationship="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasCalederEvent" key="StartDate" status="Insert">
+        	<Property mapping="StartDate" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#startDateTime"/>        	
+			<Property mapping="EndDate" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#startEndTime"/>        	
+			<Property mapping="EventName" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasEventName"/>        	
+		</Entity>
+   	</Entity>
+</Document>

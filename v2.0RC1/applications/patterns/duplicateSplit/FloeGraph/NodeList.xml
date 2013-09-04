@@ -1,0 +1,23 @@
+<Nodes>
+	<Node>
+		<nodeId>1</nodeId>
+		<pelletType>edu.usc.pgroup.floe.applications.helloworld.pellets.MessagePellet</pelletType>
+		<Resource>
+			<numCores>1</numCores>
+		</Resource>		
+	</Node>
+	<Node>
+		<nodeId>2</nodeId>		
+		<pelletType>edu.usc.pgroup.floe.applications.helloworld.pellets.WriterPellet</pelletType>
+		<Resource>
+			<numCores>1</numCores>
+		</Resource>		
+	</Node>	
+	<Node>
+		<nodeId>3</nodeId>		
+		<pelletType>edu.usc.pgroup.floe.applications.helloworld.pellets.WriterPellet</pelletType>
+		<Resource>
+			<numCores>1</numCores>
+		</Resource>		
+	</Node>	
+</Nodes>

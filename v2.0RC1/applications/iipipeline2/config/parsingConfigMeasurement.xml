@@ -1,0 +1,18 @@
+<xml>
+	<Entity>	
+		<HeaderName>Sensor</HeaderName>
+		<Transformation>SensorID</Transformation>
+	</Entity>	
+	<Entity>
+		<HeaderName>Date</HeaderName>
+		<Transformation>Date</Transformation>
+	</Entity>	
+	<Entity>
+		<HeaderName>Time</HeaderName>
+		<Transformation>Time</Transformation>		
+	</Entity>
+	<Entity>
+		<HeaderName>Measurement</HeaderName>
+		<Transformation>Measurement</Transformation>					
+	</Entity>
+</xml>

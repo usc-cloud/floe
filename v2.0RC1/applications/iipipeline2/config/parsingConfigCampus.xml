@@ -1,0 +1,6 @@
+<xml>
+	<Entity>	
+		<HeaderName>campus</HeaderName>
+		<Transformation>CampusCode</Transformation>
+	</Entity>		
+</xml>

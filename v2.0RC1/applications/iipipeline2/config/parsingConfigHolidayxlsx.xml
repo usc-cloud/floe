@@ -1,0 +1,18 @@
+<xml>
+	<Entity>	
+		<HeaderName>Campus</HeaderName>
+		<Transformation>CampusCode</Transformation>
+	</Entity>	
+	<Entity>
+		<HeaderName>Start</HeaderName>
+		<Transformation>StartDate</Transformation>
+	</Entity>	
+	<Entity>
+		<HeaderName>End</HeaderName>
+		<Transformation>EndDate</Transformation>		
+	</Entity>
+	<Entity>
+		<HeaderName>Name</HeaderName>
+		<Transformation>EventName</Transformation>					
+	</Entity>
+</xml>

@@ -1,0 +1,8 @@
+<Document>
+	<Entity class="http://dbpedia.org/ontology/Campus" relationship="" key="CampusCode" status="Insert">
+		<Property mapping="CampusCode" name="http://dbpedia.org/ontology/hasCampusCode"/>
+   	</Entity>
+</Document>
+
+
+

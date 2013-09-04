@@ -1,0 +1,14 @@
+<Edges>
+	<Edge>
+		<sourceNodeId>1</sourceNodeId>
+		<sinkNodeId>3</sinkNodeId>
+		<channelBehaviourType>Push</channelBehaviourType>
+		<channelTransportType>Socket</channelTransportType>
+	</Edge>		  
+	<Edge>
+		<sourceNodeId>2</sourceNodeId>
+		<sinkNodeId>3</sinkNodeId>
+		<channelBehaviourType>Push</channelBehaviourType>
+		<channelTransportType>Socket</channelTransportType>
+	</Edge>		  
+</Edges>

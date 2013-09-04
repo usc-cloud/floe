@@ -1,0 +1,252 @@
+<FloeGraph>
+    <Nodes>
+        <!-- Genaric node-->
+        <Node>
+            <!--Required Elements-->
+            <nodeId>1</nodeId>
+            <pelletType>edu.usc.pgroup.floe.applications.bsp.ProcessorPellet</pelletType>
+            <Resource>
+                <numberOfCores>1</numberOfCores>
+            </Resource>
+            <InPorts>
+                <Port>
+                    <portName>in</portName>
+                </Port>
+            </InPorts>
+            <OutputPorts>
+                <Port>
+                    <portName>ctrl</portName>
+                </Port>
+                <Port>
+                    <portName>p1</portName>
+                </Port>
+                <Port>
+                    <portName>p2</portName>
+                </Port>
+            </OutputPorts>
+        </Node>
+        <Node>
+            <!--Required Elements-->
+            <nodeId>2</nodeId>
+            <pelletType>edu.usc.pgroup.floe.applications.bsp.ProcessorPellet</pelletType>
+            <Resource>
+                <numberOfCores>1</numberOfCores>
+            </Resource>
+            <InPorts>
+                <Port>
+                    <portName>in</portName>
+                </Port>
+            </InPorts>
+            <OutputPorts>
+                <Port>
+                    <portName>ctrl</portName>
+                </Port>
+                <Port>
+                    <portName>p1</portName>
+                </Port>
+                <Port>
+                    <portName>p2</portName>
+                </Port>
+            </OutputPorts>
+        </Node>
+        <Node>
+            <!--Required Elements-->
+            <nodeId>3</nodeId>
+            <pelletType>edu.usc.pgroup.floe.applications.bsp.ControlPellet</pelletType>
+            <Resource>
+                <numberOfCores>1</numberOfCores>
+            </Resource>
+            <InPorts>
+                <Port>
+                    <portName>in</portName>
+                </Port>
+            </InPorts>
+            <OutputPorts>
+                <Port>
+                    <portName>out</portName>
+                </Port>
+            </OutputPorts>
+        </Node>
+
+
+        <Node>
+            <!--Required Elements-->
+            <nodeId>4</nodeId>
+            <pelletType>edu.usc.pgroup.floe.applications.bsp.FWDPellet</pelletType>
+            <Resource>
+                <numberOfCores>1</numberOfCores>
+            </Resource>
+            <InPorts>
+                <Port>
+                    <portName>in</portName>
+                </Port>
+            </InPorts>
+            <OutputPorts>
+                <Port>
+                    <portName>out</portName>
+                </Port>
+            </OutputPorts>
+        </Node>
+    </Nodes>
+
+   <!--Control Edges -->
+    <Edges>
+        <Edge>
+            <source>
+                <nodeId>1</nodeId>
+                <port>ctrl</port>
+            </source>
+            <sink>
+                <nodeId>3</nodeId>
+                <port>in</port>
+            </sink>
+            <channelBehaviourType>Push</channelBehaviourType>
+            <channelTransportType>Socket</channelTransportType>
+        </Edge>
+    </Edges>
+
+    <Edges>
+        <Edge>
+            <source>
+                <nodeId>2</nodeId>
+                <port>ctrl</port>
+            </source>
+            <sink>
+                <nodeId>3</nodeId>
+                <port>in</port>
+            </sink>
+            <channelBehaviourType>Push</channelBehaviourType>
+            <channelTransportType>Socket</channelTransportType>
+        </Edge>
+    </Edges>
+
+    <Edges>
+        <Edge>
+            <source>
+                <nodeId>3</nodeId>
+                <port>out</port>
+            </source>
+            <sink>
+                <nodeId>1</nodeId>
+                <port>in</port>
+            </sink>
+            <channelBehaviourType>Push</channelBehaviourType>
+            <channelTransportType>Socket</channelTransportType>
+        </Edge>
+    </Edges>
+
+    <Edges>
+        <Edge>
+            <source>
+                <nodeId>3</nodeId>
+                <port>out</port>
+            </source>
+            <sink>
+                <nodeId>2</nodeId>
+                <port>in</port>
+            </sink>
+            <channelBehaviourType>Push</channelBehaviourType>
+            <channelTransportType>Socket</channelTransportType>
+        </Edge>
+    </Edges>
+
+
+
+    <!--Self wiring-->
+
+    <Edges>
+        <Edge>
+            <source>
+                <nodeId>1</nodeId>
+                <port>p1</port>
+            </source>
+            <sink>
+                <nodeId>1</nodeId>
+                <port>in</port>
+            </sink>
+            <channelBehaviourType>Push</channelBehaviourType>
+            <channelTransportType>Socket</channelTransportType>
+        </Edge>
+    </Edges>
+
+    <Edges>
+        <Edge>
+            <source>
+                <nodeId>2</nodeId>
+                <port>p2</port>
+            </source>
+            <sink>
+                <nodeId>2</nodeId>
+                <port>in</port>
+            </sink>
+            <channelBehaviourType>Push</channelBehaviourType>
+            <channelTransportType>Socket</channelTransportType>
+        </Edge>
+    </Edges>
+
+
+    <!--edges to each other-->
+
+    <Edges>
+        <Edge>
+            <source>
+                <nodeId>1</nodeId>
+                <port>p2</port>
+            </source>
+            <sink>
+                <nodeId>2</nodeId>
+                <port>in</port>
+            </sink>
+            <channelBehaviourType>Push</channelBehaviourType>
+            <channelTransportType>Socket</channelTransportType>
+        </Edge>
+    </Edges>
+
+    <Edges>
+        <Edge>
+            <source>
+                <nodeId>2</nodeId>
+                <port>p1</port>
+            </source>
+            <sink>
+                <nodeId>1</nodeId>
+                <port>in</port>
+            </sink>
+            <channelBehaviourType>Push</channelBehaviourType>
+            <channelTransportType>Socket</channelTransportType>
+        </Edge>
+    </Edges>
+
+    <!--start wire-->
+
+
+    <Edges>
+        <Edge>
+            <source>
+                <nodeId>4</nodeId>
+                <port>out</port>
+            </source>
+            <sink>
+                <nodeId>1</nodeId>
+                <port>in</port>
+            </sink>
+            <channelBehaviourType>Push</channelBehaviourType>
+            <channelTransportType>Socket</channelTransportType>
+        </Edge>
+    </Edges>
+
+    <Edges>
+        <Edge>
+            <source>
+                <nodeId>4</nodeId>
+                <port>out</port>
+            </source>
+            <sink>
+                <nodeId>2</nodeId>
+                <port>in</port>
+            </sink>
+            <channelBehaviourType>Push</channelBehaviourType>
+            <channelTransportType>Socket</channelTransportType>
+        </Edge>
+    </Edges>
+</FloeGraph>

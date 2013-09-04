@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+    <Entity class="http://www.smartgrid.usc.edu/Ontology/2012.owl#Sensor" key="SensorID" status="Query">
+        <Property mapping="SensorID" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasSensorID"/>                 
+        <Entity class="http://www.smartgrid.usc.edu/Ontology/2012.owl#ElectricalMeasurement" status="Insert">
+            <Property mapping="Measurement" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasMeasuredValue"/>
+            <Property mapping="Date" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasMeasurementRecordedDate"/>            
+            <Property mapping="Time" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasMeasurementRecordedTime"/>
+        </Entity>
+    </Entity>
+</Document>

@@ -1,0 +1,54 @@
+<xml>
+	<Entity>
+		<HeaderName>Campus</HeaderName>
+		<Transformation>CampusCode</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>Building</HeaderName>
+		<Transformation>Building</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>Room Numbers</HeaderName>
+		<Transformation>RoomNo</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>Floor</HeaderName>
+		<Transformation>Floor</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>Username</HeaderName>
+		<Transformation>SensorID</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>Category</HeaderName>
+		<Transformation>ObservableFeature</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>Unit</HeaderName>
+		<Transformation>Unit</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>Association</HeaderName>
+		<Transformation>Association</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>Notes</HeaderName>
+		<Transformation>Notes</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>type</HeaderName>
+		<Transformation>Type</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>Equipment Specification</HeaderName>
+		<Transformation>EquipmentSpec</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>Equipment Designation</HeaderName>
+		<Transformation>EquipmentID</Transformation>
+	</Entity>
+	<Entity>
+		<HeaderName>Equipment Class</HeaderName>
+		<Transformation>EquipmentClass</Transformation>
+	</Entity>					
+</xml>

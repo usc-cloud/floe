@@ -1,0 +1,12 @@
+<Document>
+	<Entity class="http://purl.org/ifgi/gml/0.1/GeometryProperty" relationship="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasLatitude" key="Latitude" status="Query">
+		<Property mapping="Latitude" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasLatitude"/>
+		<Entity class="http://purl.org/ifgi/gml/0.1/WeatherMeasurement" relationship="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasWeatherMeasurement" key="" status="Insert">
+			<Property mapping="Date" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasMeasurementDate"/>
+			<Property mapping="Time" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasMeasurementTime"/>
+			<Property mapping="Temperature" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasTemperature"/>
+			<Property mapping="Humidity" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasHumidity"/>
+			<Property mapping="WindSpeed" name="http://www.smartgrid.usc.edu/Ontology/2012.owl#hasWindSpeed"/>			
+		</Entity>
+	</Entity>   	
+</Document>
